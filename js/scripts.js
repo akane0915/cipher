@@ -48,12 +48,29 @@ $(document).ready(function() {
 
 //Running Stuff
 
+
+
   $("#original-img").click(function(){
-    alert(sentence);
+
+    var display = document.getElementById("canvas");
+    var displayText = display.getContext("2d");
+
+    displayText.clearRect(0,0,800,100);
+    displayText.font = "20px Helvetica";
+    displayText.fillText(sentence,10,50);
   });
 
   $("#encrypted-img").click(function(){
-    alert(encodeSentence);
+
+
+    var display = document.getElementById("canvas");
+    var displayText = display.getContext("2d");
+
+    displayText.clearRect(0,0,800,100);
+    displayText.font = "20px Helvetica";
+    displayText.fillText(encodeSentence,10,50);
+
+
   });
 
 
